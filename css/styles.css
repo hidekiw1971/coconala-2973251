@@ -173,11 +173,174 @@ select::-ms-expand {
   display: none;
 }
 
-.header {
+.card-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-contents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px 0;
+  gap: 1.25rem 0;
+}
+@media screen and (min-width: 768px) {
+  .card-contents > li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0 1.25rem;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 375px;
+  max-width: 23.4375rem;
+  width: 100%;
+  height: 500px;
+  height: 31.25rem;
+  background: rgb(255, 255, 255);
+  position: relative;
+}
+.card > h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dateCategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  margin: 1.25rem;
+  margin-top: auto;
+}
+
+.card > h3,
+.card > p {
+  margin: 0 20px;
+  margin: 0 1.25rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.card > span {
+  width: 0;
+  border-top: 30px solid rgb(255, 105, 180);
+  border-top: 1.875rem solid rgb(255, 105, 180);
+  border-right: 30px solid transparent;
+  border-right: 1.875rem solid transparent;
+  border-bottom: 30px solid transparent;
+  border-bottom: 1.875rem solid transparent;
+  border-left: 30px solid rgb(255, 105, 180);
+  border-left: 1.875rem solid rgb(255, 105, 180);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.card > span::before {
+  content: "New";
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 0;
+  letter-spacing: 0.0625em;
+  position: relative;
+  top: 0;
+  left: -25px;
+  left: -1.5625rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.card > figure {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.card > figure::before {
+  content: "";
+  display: block;
+  max-width: 375px;
+  max-width: 23.4375rem;
+  width: 100%;
+  padding-top: 75%;
+}
+.card > figure > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+}
+.contents {
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .contents {
+    text-align: center;
+  }
+}
+
+.contents > h2 {
   background: rgb(255, 187, 28);
-  max-width: 100%;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.0416666667em;
+  text-align: center;
+  padding: 20px;
+  padding: 1.25rem;
+}
+.contents > p {
+  background: rgb(235, 206, 108);
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.0625em;
+  padding: 20px;
+  padding: 1.25rem;
+}
+.header {
+  position: fixed;
+  background: rgb(255, 187, 28);
+  display: block;
+  width: 100%;
   padding: 20px 20px;
   padding: 1.25rem 1.25rem;
+  z-index: 10;
 }
 .header > .header-wrapper > h1::before {
   content: "一般社団法人";
@@ -278,5 +441,67 @@ select::-ms-expand {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 0;
+}
+.kcard {
+  display: block;
+  height: 600px;
+  height: 37.5rem;
+}
+
+.kul > li > a > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kul > li > a > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kul > li > a > .dateCategory {
+  margin-top: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mv {
+  overflow: hidden;
+  position: relative;
+}
+.mv::before {
+  content: "";
+  display: block;
+  padding-top: 100dvh;
+}
+.mv > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mv > p {
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .mv > p {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

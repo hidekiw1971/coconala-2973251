@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.kcard {
+    display: block;
+    height: rem(600);
+}
+
+.kul>li>a>h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+.kul>li>a>p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.kul>li>a>.dateCategory {
+    margin-top: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}

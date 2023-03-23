@@ -8,6 +8,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-drawer").toggleClass("js-drawer-open");
     $(".js-drawer-menu").toggleClass("js-drawer-menu-open");
   });
+
+
   // 
   // ここまで
 

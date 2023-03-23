@@ -1,9 +1,12 @@
 @use "global" as *;
 
 .header {
+    position: fixed;
     background: rgba(255, 187, 28, 1);
-    max-width: 100%;
+    display: block;
+    width: 100%;
     padding: rem(20) rem(20);
+    z-index: 10;
 
     @include mq(md) {
         // 
