@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.js-drawer {
+    display: block;
+    width: rem(50);
+    height: rem(50);
+    // background: rgba(255, 0, 0, 1);
+    position: relative;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.js-drawer>span {
+    display: block;
+    width: rem(50);
+    padding-top: rem(5);
+    border-radius: rem(5);
+    background: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s linear;
+}
+
+.js-drawer>span::before {
+    content: "";
+    display: block;
+    width: rem(50);
+    padding-top: rem(5);
+    border-radius: rem(5);
+    background: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: rem(13);
+    transition: 0.3s linear;
+}
+
+.js-drawer>span::after {
+    content: "";
+    display: block;
+    width: rem(50);
+    padding-top: rem(5);
+    border-radius: rem(5);
+    background: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: rem(-13);
+    transition: 0.3s linear;
+}
+
+// click action
+.js-drawer-open>span {
+    background: rgba(0, 0, 0, 0);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.js-drawer-open>span::before {
+    transform: rotate(-45deg);
+    top: 0;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.js-drawer-open>span::after {
+    transform: rotate(45deg);
+    top: 0;
+
+    @include mq(md) {
+        // 
+    }
+}

@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.header {
+    background: rgba(255, 187, 28, 1);
+    max-width: 100%;
+    padding: rem(20) rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.header>.header-wrapper>h1::before {
+    content: "一般社団法人";
+    display: block;
+    font-size: rem(10);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.header>.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background: rgba(255, 127, 80, 1);
+
+    @include mq(md) {
+        max-width: rem(1280);
+        margin: 0 auto;
+    }
+}
