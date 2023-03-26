@@ -404,7 +404,7 @@ select::-ms-expand {
   z-index: 10;
 }
 .header > .header-wrapper > a > h1::before {
-  content: "一般社団法人";
+  content: "一般ｘｘｘｘ";
   display: block;
   font-size: 10px;
   font-size: 0.625rem;
@@ -644,6 +644,10 @@ select::-ms-expand {
   .js-drawer {
     display: none;
   }
+}
+
+.js-drawer:hover {
+  cursor: pointer;
 }
 
 .js-drawer > span {

@@ -77,6 +77,10 @@
     }
 }
 
+.js-drawer:hover {
+    cursor: pointer;
+}
+
 .js-drawer>span {
     display: block;
     width: rem(50);
