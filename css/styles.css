@@ -167,6 +167,31 @@ select::-ms-expand {
   display: none;
 }
 
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.breadcrumb > li:not(:last-child) {
+  margin-right: 10px;
+  margin-right: 0.625rem;
+}
+.breadcrumb > li:not(:last-child)::after {
+  content: ">";
+  display: inline-block;
+  padding-left: 10px;
+  padding-left: 0.625rem;
+}
 .card-contents {
   display: -webkit-box;
   display: -ms-flexbox;
