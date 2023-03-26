@@ -1,9 +1,0 @@
-@use "global" as *;
-
-body.active {
-    overflow: hidden;
-
-    @include mq(md) {
-        // 
-    }
-}

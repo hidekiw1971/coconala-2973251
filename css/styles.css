@@ -167,9 +167,6 @@ select::-ms-expand {
   display: none;
 }
 
-body.active {
-  overflow: hidden;
-}
 .card-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,7 +582,7 @@ body.active {
 }
 
 .js-drawer-menu {
-  position: absolute;
+  position: fixed;
   top: -100%;
   left: 0;
   z-index: 5;
@@ -911,5 +908,24 @@ body.active {
 .swiper-slide > .card:hover {
   -webkit-transform: translateY(-0.9375rem);
           transform: translateY(-0.9375rem);
+}
+
+/* 矢印を消す、画像に変更 */
+.swiper > .swiper-button-prev::after,
+.swiper > .swiper-button-next::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+.swiper > .swiper-button-prev::after {
+  background-image: url(/images/Polygon-left.png);
+}
+
+.swiper > .swiper-button-next::after {
+  background-image: url(/images/Polygon-right.png);
 }
 /*# sourceMappingURL=styles.css.map */
