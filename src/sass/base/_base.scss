@@ -2,6 +2,7 @@
 @use "global" as *;
 
 html {
+
   //~375px
   @media (max-width: 375px) {
     font-size: vw(375, 16);
@@ -32,9 +33,10 @@ a {
   text-decoration: none;
   color: inherit;
   transition: opacity 0.3s;
+
   @include mq("md") {
     &:hover {
-      opacity: 0.8;
+      // opacity: 0.8;
     }
   }
 }

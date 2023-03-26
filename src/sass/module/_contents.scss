@@ -2,6 +2,7 @@
 
 .contents {
     margin-bottom: rem(50);
+    background: rgba(235, 206, 108, 1);
 
     @include mq(md) {
         text-align: center;
