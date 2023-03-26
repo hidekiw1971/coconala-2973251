@@ -7,6 +7,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(".js-drawer").click(function () {
     $(".js-drawer").toggleClass("js-drawer-open");
     $(".js-drawer-menu").toggleClass("js-drawer-menu-open");
+    $("body").toggleClass("active");
   });
 
   // 里親募集

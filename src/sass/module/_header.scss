@@ -17,9 +17,11 @@
     content: "一般社団法人";
     display: block;
     font-size: rem(10);
+    position: absolute;
+    top: rem(20);
 
     @include mq(md) {
-        // 
+        top: rem(50);
     }
 }
 
@@ -27,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: rem(10);
 
     @include mq(md) {
         max-width: rem(1280);
@@ -63,7 +66,6 @@
     }
 }
 
-// hover
 .header>.header-wrapper>.menu>.menu-list>li {
     display: none;
 
@@ -74,6 +76,16 @@
     }
 }
 
+.header>.header-wrapper>.menu>.menu-list>li:not(:last-child) {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        margin-right: rem(5);
+    }
+}
+
+// hover
 .header>.header-wrapper>.menu>.menu-list>li:hover {
     display: none;
 
