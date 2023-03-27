@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.message {
+    background: rgba(235, 206, 108, 1);
+    padding: rem(20);
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.message>li:not(:last-child) {
+    margin-bottom: rem(30);
+
+    @include mq(md) {
+        // 
+    }
+}

@@ -737,6 +737,16 @@ select::-ms-expand {
           transform: rotate(45deg);
   top: 0;
 }
+.message {
+  background: rgb(235, 206, 108);
+  padding: 20px;
+  padding: 1.25rem;
+  text-align: center;
+}
+.message > li:not(:last-child) {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
 .mv {
   overflow: hidden;
   position: relative;
