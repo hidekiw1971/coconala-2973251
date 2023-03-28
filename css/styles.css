@@ -817,6 +817,57 @@ select::-ms-expand {
           transform: rotate(45deg);
   top: 0;
 }
+.js-scroll-top {
+  display: block;
+  width: 0;
+  border-top: solid 25px rgba(255, 0, 0, 0);
+  border-top: solid 1.5625rem rgba(255, 0, 0, 0);
+  border-right: solid 25px rgba(255, 0, 0, 0);
+  border-right: solid 1.5625rem rgba(255, 0, 0, 0);
+  border-bottom: solid 25px rgba(255, 0, 0, 0);
+  border-bottom: solid 1.5625rem rgba(255, 0, 0, 0);
+  border-left: solid 25px rgba(255, 0, 0, 0);
+  border-left: solid 1.5625rem rgba(255, 0, 0, 0);
+  border-radius: 2.8125rem;
+  padding: 0;
+  position: fixed;
+  z-index: 10;
+  bottom: 50px;
+  bottom: 3.125rem;
+  right: 50px;
+  right: 3.125rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.js-scroll-top::before {
+  content: "top";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: rgba(51, 51, 51, 0);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.js-scroll-top-active {
+  border-top: solid 25px rgba(255, 0, 0, .3);
+  border-top: solid 1.5625rem rgba(255, 0, 0, .3);
+  border-right: solid 25px rgba(255, 0, 0, .3);
+  border-right: solid 1.5625rem rgba(255, 0, 0, .3);
+  border-bottom: solid 25px rgba(255, 0, 0, .3);
+  border-bottom: solid 1.5625rem rgba(255, 0, 0, .3);
+  border-left: solid 25px rgba(255, 0, 0, .3);
+  border-left: solid 1.5625rem rgba(255, 0, 0, .3);
+}
+
+.js-scroll-top-active::before {
+  color: rgba(51, 51, 51, .3);
+}
+
 .message {
   background: rgb(235, 206, 108);
   padding: 20px;

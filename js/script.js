@@ -9,6 +9,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-drawer-menu").toggleClass("js-drawer-menu-open");
   });
 
+
   // 里親募集
   const mySwiper = new Swiper('.mySwiper-satoOya', {
     slidesPerView: 1.2, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
@@ -44,6 +45,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
+
   // お知らせ
   const mySwiperOshirase = new Swiper('.mySwiper-oshirase', {
     slidesPerView: 1.2, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
@@ -73,12 +75,47 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+
   // アコーディオン
   $('.nekonote-q').click(function () {
     $(this).siblings('.nekonote-a').stop().slideToggle();
     $('.nekonote-q').not($(this)).siblings('.nekonote-a').slideUp();
     $(this).toggleClass('active');
     $('.nekonote-q').not($(this)).removeClass('active');
+  });
+
+
+  // スクロールトップボタンの表示設定
+  if ($(".js-scroll-top").length) {
+    scrollAnimation();
+  }
+  // animation呼び出し関数
+  function scrollAnimation() {
+    $(window).scroll(function () {
+      $(".js-scroll-top").each(function () { // each(要素に対して行う処理)
+        // ↓情報を変数に格納している
+        let position = $(this).offset().top, // topのy座標を取得
+          scroll = $(window).scrollTop(), // scroll位置を取得
+          windowHeight = $(window).height(); // ウィンドウの高さを取得
+
+        // if (scroll > position - windowHeight + 200) {
+        if (scroll > 500) {
+          $(this).addClass("js-scroll-top-active");
+        } else {
+          $(this).removeClass("js-scroll-top-active");
+
+        }
+      });
+    });
+  }
+
+
+  // ボタンをクリックしたらスクロールして上に戻る
+  $('.js-scroll-top').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 300, 'swing');
+    return false;
   });
 
   // 
