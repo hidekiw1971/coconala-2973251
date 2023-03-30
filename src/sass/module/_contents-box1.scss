@@ -3,6 +3,7 @@
 // contents-box1 image-left
 .contents-box1 {
     background: rgba(255, 255, 255, 1);
+    margin-bottom: rem(50);
 
     @include mq(md) {
         display: grid;
@@ -80,16 +81,130 @@
     }
 }
 
-// contents-box1 image-right
-.contents-box1.contents-box1-right {
+
+// table
+// .contents-box1>ul>li>table>tbody {
+// vertical-align: top;
+// }
+
+
+// box-image-right
+.box-image-right {
+    margin-bottom: rem(50);
+
     @include mq(md) {
-        direction: rtl;
-        text-align: left;
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr;
+        align-items: center;
+        max-width: rem(1280);
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: rem(50);
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
+.box-image-right>h2 {
+    background: rgba(255, 187, 28, 1);
+    text-align: center;
+    padding: rem(10) rem(20);
+    display: block;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.box-image-right>ul>li>h2 {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.box-image-right>ul {
+    background: rgba(255, 255, 255, 1);
+    padding: rem(20);
+
+    @include mq(md) {
         // 
     }
 }
 
-// table
-.contents-box1>ul>li>table>tbody {
-    vertical-align: top;
+.box-image-right>ul>li {
+    padding: rem(10) 0;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>ul>li>h3 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>span {
+    @include mq(md) {
+        height: 100%;
+        background: rgba(235, 206, 108, 1);
+    }
+}
+
+// imageの標示設定
+.box-image-right>.up {
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.box-image-right>.bottom {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.contents-box1>.image {
+    display: grid;
+    grid-template-columns: repaet(4, 1fr);
+    width: 100%;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>.image>li>img {
+    max-width: rem(50);
+    width: 100%;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>ul>li>img {
+    width: rem(50);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>ul>li.image {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+    @include mq(md) {
+        // 
+    }
 }
