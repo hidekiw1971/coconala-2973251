@@ -192,6 +192,27 @@ select::-ms-expand {
   padding-left: 10px;
   padding-left: 0.625rem;
 }
+.card-box {
+  display: grid;
+  gap: 20px 0;
+  gap: 1.25rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .card-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem 1.25rem;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3.125rem;
+  }
+}
+
 .card-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,5 +1186,41 @@ select::-ms-expand {
 
 .swiper > .swiper-button-next::after {
   background-image: url(/images/Polygon-right.png);
+}
+
+.wp-pagenavi {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+.wp-pagenavi > a {
+  border: solid 1px rgba(0, 0, 0, .5);
+  border: solid 0.0625rem rgba(0, 0, 0, .5);
+  padding: 3px 5px;
+  padding: 0.1875rem 0.3125rem;
+}
+.wp-pagenavi > a:first-child,
+.wp-pagenavi > a:last-child {
+  border: solid 1px transparent;
+  border: solid 0.0625rem transparent;
+}
+.wp-pagenavi > a:not(:last-child) {
+  margin-right: 20px;
+  margin-right: 1.25rem;
+}
+.wp-pagenavi > .previouspostslink,
+.wp-pagenavi > .nextpostslink {
+  border: solid 1px transparent;
+  border: solid 0.0625rem transparent;
+}
+.wp-pagenavi > span {
+  display: inline-block;
+  padding: 3px 5px;
+  padding: 0.1875rem 0.3125rem;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  background: rgb(255, 255, 255);
+  border: solid 1px rgb(255, 255, 255);
+  border: solid 0.0625rem rgb(255, 255, 255);
 }
 /*# sourceMappingURL=styles.css.map */
