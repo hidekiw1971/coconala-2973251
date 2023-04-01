@@ -132,7 +132,6 @@ img:not([alt]) {
 }
 
 /* フォームリセット */
-input,
 button,
 select,
 textarea {
@@ -150,8 +149,7 @@ textarea {
   resize: vertical;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type=checkbox] {
   display: none;
 }
 
@@ -771,6 +769,105 @@ select::-ms-expand {
 .header > .menu-telsns-mobile > li > a > img {
   width: 24px;
   width: 1.5rem;
+}
+
+.inquily {
+  text-align: center;
+  max-width: 1280px;
+  max-width: 80rem;
+  width: 100%;
+  padding: 20px;
+  padding: 1.25rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+.inquily > .radio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .inquily > .radio {
+    grid-template-columns: repeat(2, 15%);
+  }
+}
+
+.inquily > .radio > li > input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .inquily > .radio > li {
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .inquily > ul > li:not(.comment > li) {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 3.75rem;
+    text-align: left;
+  }
+}
+
+.inquily > ul > li:not(:last-child) {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+.inquily > ul > li > label,
+.inquily > ul > li > textarea,
+.inquily > ul > li > input {
+  width: 100%;
+  margin: 0;
+}
+.inquily > ul > li > textarea {
+  background: rgb(255, 255, 255);
+  border: solid 1px rgba(0, 0, 0, .5);
+  border: solid 0.0625rem rgba(0, 0, 0, .5);
+}
+
+.inquily > .comment > li > h4 {
+  text-align: left;
+}
+.inquily > .privacy > li > label {
+  display: block;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .inquily > .privacy > li > label {
+    margin: 0;
+  }
+}
+
+.inquily > ul > li > input,
+.inquily > ul > li > textarea {
+  border: solid 10px rgb(255, 255, 255);
+  border: solid 0.625rem rgb(255, 255, 255);
+  background: rgb(245, 245, 245);
+}
+.inquily > ul > li > .submit {
+  border: solid 1px rgba(0, 0, 0, .5);
+  border: solid 0.0625rem rgba(0, 0, 0, .5);
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+}
+.inquily > ul > li > h4 {
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .inquily > .privacy > li > label {
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .js-drawer-menu {
