@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.blog-article {
+
+    @include mq(md) {
+        display: flex;
+        flex-direction: row;
+        max-width: rem(1280);
+        width: 100%;
+        margin: 0 auto;
+        // 
+    }
+}
+
+.blog-article-card {
+
+    @include mq(md) {
+        flex: 2.3;
+        // background: rgba(255, 127, 80, 1);
+        margin: 0;
+        // 
+    }
+}
+
+.blog-article-card>.contents {
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.blog-article-card>.contents>h3 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+// side-bar設定
+.blog-article>.side-bar {
+    padding: 0 rem(20);
+    margin: 0;
+    margin-bottom: rem(50);
+
+    @include mq(md) {
+        flex: 0.7;
+        margin: 0;
+        margin-left: rem(20);
+        padding: rem(20);
+        padding-top: 0;
+        // background: rgba(255, 255, 255, 1);
+    }
+}
+
+.side-bar>nav {
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.side-bar>nav {
+    margin-bottom: rem(50);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.side-bar>nav>ul>li {
+    // text-indent: rem(16);
+    text-indent: 1em;
+
+    @include mq(md) {
+        // 
+    }
+}

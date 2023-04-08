@@ -126,3 +126,39 @@ margin-bottom: rem(20);
         // 
     }
 }
+
+// card-popular設定
+.card-popular {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.card-popular>h2 {
+    font-size: rem(16);
+    text-indent: initial;
+    padding: rem(5);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.popular>ul>li>a {
+    background: rgba(255, 255, 255, 1);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.side-bar>.popular>ul>li:not(:last-child) {
+    margin-bottom: rem(10);
+
+    @include mq(md) {
+        // 
+    }
+}
